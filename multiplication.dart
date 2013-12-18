@@ -1,5 +1,5 @@
 library multiplication;
-import 'expressions.dart';
+import 'expressions.dart' show Expression;
 
 abstract class AbstractMultiplication {
   Expression operand1, operand2;

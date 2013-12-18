@@ -1,6 +1,6 @@
 library abstract_expressions;
 
-import 'expressions.dart';
+import 'expressions.dart' show Expression;
 
 abstract class AbstractExpression {}
 

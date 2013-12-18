@@ -1,7 +1,7 @@
 library string_converter;
 
 import 'abstractExpressions.dart';
-import 'multiplication.dart';
+import 'multiplication.dart' show AbstractMultiplication;
 
 abstract class ExpressionWithStringConversion implements AbstractExpression {
  String toString();
