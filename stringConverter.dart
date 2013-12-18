@@ -9,7 +9,7 @@ abstract class ExpressionWithStringConversion implements AbstractExpression {
 
 abstract class AdditionWithStringConversion implements AbstractAddition{
  String toString() {
-    return '(' + operand1.toString() + ' + ' + operand2.toString() + ')';
+    return '($operand1 + $operand2))';
   }
 }
 
@@ -27,6 +27,6 @@ abstract class NumberWithStringConversion implements AbstractNumber {
 
 abstract class MultiplicationWithStringConversion implements AbstractMultiplication {
  String toString() {
-    return '('+ operand1.toString() + ' * ' + operand2.toString() + ')';
+    return '($operand1 * $operand2)';
   }
 }
