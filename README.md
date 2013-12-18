@@ -10,7 +10,7 @@ stringConverter.dart defines toString() on the extended hierarchy including mult
 expressions.dart ties everything together. 
 
 The assumption is that we started without multiplication and without any functions. Then we added evaluation,
-followe dby adding the AST node for multiplication. Next we added string conversion. Each extension is separate.
-The only file that needs to be modifed at each stage is expressions.dart, which ties everything together.
+followed by adding the AST node for multiplication. Next we added string conversion. Each extension is separate.
+The only file that needs to be modified at each stage is expressions.dart.
 
 dart-expression-problem
