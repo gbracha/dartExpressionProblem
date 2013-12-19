@@ -12,7 +12,5 @@ abstract class AbstractMultiplication {
 }
 
 abstract class MultiplicationWithEval implements AbstractMultiplication {
- int get eval {
-    return operand1.eval * operand2.eval;
-  }
+ int get eval => operand1.eval * operand2.eval;
 }
