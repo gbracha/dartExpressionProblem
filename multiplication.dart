@@ -1,4 +1,8 @@
 library multiplication;
+/**
+ * Add a type representing products to the expression hierarchy.
+ * Because we know eval has already been defined, we add a mixin to implement it here.
+ */
 import 'expressions.dart' show Expression;
 
 abstract class AbstractMultiplication {

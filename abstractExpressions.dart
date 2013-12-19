@@ -1,5 +1,13 @@
 library abstract_expressions;
 
+/**
+ * An initial set of types representing ASTs for the expression language.
+ * The types here are abstract, since the leaf types need to be defined in the expressions library itself.
+ * See expressions.dart for details. 
+ * 
+ * Other types can be added separately (see multiplications.dart for an example).
+ */
+
 import 'expressions.dart' show Expression;
 
 abstract class AbstractExpression {}

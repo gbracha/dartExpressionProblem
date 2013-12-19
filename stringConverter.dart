@@ -1,4 +1,10 @@
 library string_converter;
+/**
+ * A string converter fro the expression hierarchy. The converter consists of mixin classes that define
+ * the toString() method for all the datatypes known at the time this library was defined.
+ * New types may be added later, and they should add suitable implementations of toString()
+ * for themselves, as mixin classes of the same form.
+ */
 
 import 'abstractExpressions.dart';
 import 'multiplication.dart' show AbstractMultiplication;
