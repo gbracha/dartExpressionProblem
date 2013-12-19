@@ -16,7 +16,7 @@ abstract class ExpressionWithEval implements AbstractExpression {
  int get eval;
 }
 
-abstract class AdditionWithEval implements AbstractAddition{
+abstract class AdditionWithEval implements AbstractAddition {
  int get eval {
     return operand1.eval + operand2.eval;
   }
