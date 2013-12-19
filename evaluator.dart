@@ -17,21 +17,15 @@ abstract class ExpressionWithEval implements AbstractExpression {
 }
 
 abstract class AdditionWithEval implements AbstractAddition {
- int get eval {
-    return operand1.eval + operand2.eval;
-  }
+ int get eval => operand1.eval + operand2.eval;
 }
 
 abstract class SubtractionWithEval implements AbstractSubtraction {
- int get eval {
-    return operand1.eval - operand2.eval;
-  }
+ int get eval => operand1.eval - operand2.eval;
 }
 
 abstract class NumberWithEval implements AbstractNumber {
- int get eval {
-    return val;
-  }
+ int get eval => val;
 }
 
 

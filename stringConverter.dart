@@ -14,25 +14,17 @@ abstract class ExpressionWithStringConversion implements AbstractExpression {
 }
 
 abstract class AdditionWithStringConversion implements AbstractAddition{
- String toString() {
-    return '($operand1 + $operand2))';
-  }
+ String toString() =>'($operand1 + $operand2))';
 }
 
 abstract class SubtractionWithStringConversion implements AbstractSubtraction {
- String toString() {
-    return '($operand1 - $operand2)';
-  }
+ String toString() => '($operand1 - $operand2)';
 }
 
 abstract class NumberWithStringConversion implements AbstractNumber {
- String toString() {
-    return val.toString();
-  }
+ String toString() => val.toString();
 }
 
 abstract class MultiplicationWithStringConversion implements AbstractMultiplication {
- String toString() {
-    return '($operand1 * $operand2)';
-  }
+ String toString() => '($operand1 * $operand2)';
 }
