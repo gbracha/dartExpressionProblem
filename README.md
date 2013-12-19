@@ -1,7 +1,7 @@
 dartExpressionProblem
 =====================
 
-This code shows a solution to the expression problem using mixins. There are 5 files: 
+This code shows a solution to the expression problem using mixins. At the top level here are 5 files that describe a non-generic but typed version. In addition there are subdirectories for untyped and generic versions. The typed version should move to its own subdirectory as well. The typed version has the folloing structure: 
 
 abstractExpressions.dart shows an initial type hierarchy for an AST for a simple expression language.
 evaluator.dart defines an evaluator on this AST.
