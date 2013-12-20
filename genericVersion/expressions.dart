@@ -71,20 +71,21 @@ class Expression =
   AbstractExpression with ExpressionWithEval, ExpressionWithStringConversion;
 
 class Addition = 
-  AbstractAddition<Expression> with AdditionWithEval, AdditionWithStringConversion implements Expression;
+  AbstractAddition<Expression> with AdditionWithEval<Expression>, 
+                               AdditionWithStringConversion<Expression> implements Expression;
 
 class Subtraction = 
-  AbstractSubtraction<Expression> with SubtractionWithEval, 
-                  SubtractionWithStringConversion implements Expression;
+  AbstractSubtraction<Expression> with SubtractionWithEval<Expression>, 
+                                  SubtractionWithStringConversion<Expression> implements Expression;
 
 class Number = 
   AbstractNumber with NumberWithEval,
-                NumberWithStringConversion implements Expression;
+                 NumberWithStringConversion implements Expression;
 
 
 class Multiplication = 
-  AbstractMultiplication<Expression> with  MultiplicationWithEval, 
-                  MultiplicationWithStringConversion implements Expression;
+  AbstractMultiplication<Expression> with  MultiplicationWithEval<Expression>, 
+                                           MultiplicationWithStringConversion<Expression> implements Expression;
 
 
 void main() {
