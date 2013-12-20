@@ -6,6 +6,10 @@ library abstract_expressions;
  * See expressions.dart for details. 
  * 
  * Other types can be added separately (see multiplications.dart for an example).
+ * 
+ * The types are also generic in the expression type E. This is because the concrete type
+ * of expressions is defined separately and independently, but these types have
+ * expressions as members.
  */
 
 

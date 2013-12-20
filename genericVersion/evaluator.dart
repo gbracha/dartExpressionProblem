@@ -8,6 +8,21 @@ library evaluator;
  * 
  * For an example, see multiplications.dart, which adds a new AST node to represent
  * products, as well as an implementation of eval for it.
+ * 
+ * Most mixin classes here are generic because they need to refer to the expression-valued
+ * (and typed) members of the type they are intended to extend. This type is not fixed at the
+ * time this code is defined, and so is defined via a type parameter E. E is bounded by
+ * ExpressionWithEval which defines the eval getter required by the
+ * function. 
+ * 
+ * All the mixin classes define abstract members corresponding to the fields of the matching
+ * datatype. This is required to avoid warnings about missing members of this. In most cases
+ * below, these members are a pair of operands. It would be nice to factor these out to a common
+ * definition such as BinaryExpression; however, we cannot define mixins that extend a class
+ * other than Object in the current Dart release. Alternatives would include implementing
+ * BinaryExpression as an interface, or implementing the datatype the mixin aims to extend
+ * (as is done in the simply typed version). None of these significantly shorten the code, and
+ * they all induce dependencies on other libraries, so we avoid this approach here.
  */
 
 
