@@ -9,23 +9,23 @@ class Expression =
   ExpressionWithEval with ExpressionWithStringConversion;
 
 class Addition = 
-  AbstractAddition with AdditionWithEval, AdditionWithStringConversion;
+  AbstractAddition with AdditionWithEval, AdditionWithStringConversion implements Expression;
 
 class Subtraction = 
   AbstractSubtraction with SubtractionWithEval, 
-                  SubtractionWithStringConversion;
+                  SubtractionWithStringConversion implements Expression;
 
 class Number = 
   AbstractNumber with NumberWithEval, 
-                  NumberWithStringConversion;
+                  NumberWithStringConversion implements Expression;
 
 
 class Multiplication = 
   AbstractMultiplication with  MultiplicationWithEval, 
-                  MultiplicationWithStringConversion;
+                  MultiplicationWithStringConversion implements Expression;
 
 
-void main() {
+main() {
   var e = new Multiplication(new Addition(new Number(4), new Number(2)), 
                                     new Subtraction(new Number(10), new Number(7))
                     );
