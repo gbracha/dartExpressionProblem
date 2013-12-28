@@ -49,7 +49,7 @@ library expressions;
  * Because of the restriction that classes with constructors cannot be used as mixins, we cannot start the
  * process for leaf types with something like
  * 
- * class X = Object with AbstractX;
+ * class X = Object with AbstractX<Expression>;
  * 
  * so if there are no functions, we need not define the ultimate leaf types at all. Only the abstract types
  * need be defined for any types of interest. 

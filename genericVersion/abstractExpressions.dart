@@ -9,7 +9,8 @@ library abstract_expressions;
  * 
  * The types are also generic in the expression type E. This is because the concrete type
  * of expressions is defined separately and independently, but these types have
- * expressions as members.
+ * expressions as members. The members are therefore typed using the type parameter
+ * E, which will be insatntiated to Expression in the main library.
  */
 
 
