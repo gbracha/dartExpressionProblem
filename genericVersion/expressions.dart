@@ -14,18 +14,19 @@ library expressions;
  * Functions on expressions are defined in other libraries as the need arises.
  * Each function F is defined via series of mixin classes
  * 
- * class XWithF { f() {...} }
+ * class XWithF<E extends ExpressionWithF> { f() {...} }
  * 
- * for each known leaf type X, and for Expression. The class ExpressionWithF defines the signature of F.
+ * for each known leaf type X. A class ExpressionWithF should be introduced for every function F
+ * and defines a single method F that gives the signature of F.
  * 
  * Each type X is represented via an abstract class of the form
  * 
- * abstract class AbstractX { ... }
+ * abstract class AbstractX<E> { ... }
  * 
  * These types are defined in other libraries and define the public structure of the type and its constructor.
  * Only the leaf types derived from these abstract types are defined here.
  * 
- * Adding a new leaf type X requires defining type AbstractX and adding
+ * Adding a new leaf type X requires defining type AbstractX<E> and adding
  * type X here, defined as a mixin application as described below.
  * 
  * Expression is defined here as a mixin application that applies all classes ExpressionWithFk
@@ -57,7 +58,7 @@ library expressions;
  * subclasses the corresponding abstract type, and new functions require adding their corresponding class to be mixed
  * in for each leaf type.  Hence a leaf type has the form
  * 
- * class X = AbstractX with XWithF1, XWithF2; // etc
+ * class X = AbstractX<Expression> with XWithF1<Expression>, XWithF2<Expression>; // etc
  * 
  */
 
