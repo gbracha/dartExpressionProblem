@@ -10,7 +10,7 @@ library evaluator;
  * products, as well as an implementation of eval for it.
  */
 
-import 'abstractExpressions.dart';
+import 'abstractExpressions.dart' show AbstractExpression, AbstractAddition, AbstractSubtraction, AbstractNumber;
 
 abstract class ExpressionWithEval implements AbstractExpression {
  int get eval;
