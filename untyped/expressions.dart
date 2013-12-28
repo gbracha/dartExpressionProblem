@@ -1,9 +1,11 @@
 library expressions;
 
-import 'abstractExpressions.dart';
-import 'evaluator.dart';
-import 'multiplication.dart';
-import 'stringConverter.dart';
+import 'abstractExpressions.dart' show AbstractExpression, AbstractAddition, AbstractSubtraction, AbstractNumber;
+import 'evaluator.dart' show ExpressionWithEval, AdditionWithEval, SubtractionWithEval, NumberWithEval;
+import 'multiplication.dart' show AbstractMultiplication, MultiplicationWithEval;
+import 'stringConverter.dart'show ExpressionWithStringConversion, AdditionWithStringConversion,
+                                  SubtractionWithStringConversion, NumberWithStringConversion, 
+                                  MultiplicationWithStringConversion;
 
 class Expression = 
   ExpressionWithEval with ExpressionWithStringConversion;

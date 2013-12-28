@@ -6,7 +6,7 @@ library string_converter;
  * for themselves, as mixin classes of the same form.
  */
 
-import 'abstractExpressions.dart';
+import 'abstractExpressions.dart' show AbstractExpression, AbstractAddition, AbstractSubtraction, AbstractNumber;
 import 'multiplication.dart' show AbstractMultiplication;
 
 abstract class ExpressionWithStringConversion implements AbstractExpression {
