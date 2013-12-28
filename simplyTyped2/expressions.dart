@@ -70,7 +70,7 @@ class Expression =
   AbstractExpression with ExpressionWithEval, ExpressionWithStringConversion;
 
 class Addition = 
-  AbstractAddition with AdditionWithEval, AdditionWithStringConversion;
+  AbstractAddition with AdditionWithEval, AdditionWithStringConversion implements Expression;
 
 class Subtraction = 
   AbstractSubtraction with SubtractionWithEval, 

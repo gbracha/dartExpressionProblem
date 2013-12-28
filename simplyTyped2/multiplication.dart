@@ -13,7 +13,7 @@ abstract class AbstractMultiplication {
 }
 
 abstract class MultiplicationWithEval {
-  ExpressionWithEval operand1;
-  ExpressionWithEval operand2;
+  ExpressionWithEval get operand1;
+  ExpressionWithEval get operand2;
   int get eval => operand1.eval * operand2.eval;
 }
